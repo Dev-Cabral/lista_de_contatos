@@ -8,7 +8,7 @@ type TarefaState = {
 const initialState: TarefaState = {
   itens: [
     {
-      id: 2,
+      id: 1,
       nome: 'Estudar material de apoio',
       email: '',
       telefone: 0,

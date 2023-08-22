@@ -20,11 +20,9 @@ const Formulario = () => {
 
     dispatch(
       cadastrar({
-        nome: '',
-        email: '',
-        telefone: 0,
-        contato: '',
-        criterio: ''
+        nome: nome,
+        email: email,
+        telefone: 0
       })
     )
     navigate('/')

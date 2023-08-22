@@ -9,20 +9,20 @@ import { Botao, BotaoSalvar } from '../../styles'
 
 type Props = TarefaClass
 
-const Tarefa = ({ contato, id }: Props) => {
+const Tarefa = ({ id }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
-  const [contato2, setContato2] = useState('')
+  const [contato, setContato] = useState('')
 
   useEffect(() => {
     if (contato.length > 0) {
-      setContato2(contato)
+      setContato(contato)
     }
   }, [contato])
 
   function cancelarEdicao() {
     setEstaEditando(false)
-    setContato2(contato2)
+    setContato(contato)
   }
 
   return (
@@ -37,7 +37,7 @@ const Tarefa = ({ contato, id }: Props) => {
       <S.Descricao
         disabled={!estaEditando}
         value={contato}
-        onChange={(evento) => setContato2(evento.target.value)}
+        onChange={(evento) => setContato(evento.target.value)}
       />
       <S.BarraAcoes>
         {estaEditando ? (
@@ -46,10 +46,10 @@ const Tarefa = ({ contato, id }: Props) => {
               onClick={() => {
                 dispatch(
                   editar({
-                    contato,
+                    contato: 'Contato',
                     id,
-                    nome: '',
-                    email: '',
+                    nome: 'Nome',
+                    email: 'Email',
                     telefone: 0,
                     criterio: ''
                   })

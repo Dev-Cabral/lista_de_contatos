@@ -58,8 +58,8 @@ const ListaDeTarefas = () => {
           <li key={t.nome}>
             <Tarefa
               id={t.id}
-              contato={''}
-              nome={''}
+              contato={'contato'}
+              nome={'contato'}
               email={''}
               telefone={0}
               criterio={''}

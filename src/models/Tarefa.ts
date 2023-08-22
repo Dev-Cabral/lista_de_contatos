@@ -1,8 +1,8 @@
 class Tarefa {
-  contato: string
+  contato?: string
   nome: string
   email: string
-  telefone: number
+  telefone?: number
   id: number
   criterio?: string
 
