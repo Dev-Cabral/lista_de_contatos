@@ -9,10 +9,10 @@ const initialState: TarefaState = {
   itens: [
     {
       id: 1,
-      nome: 'Estudar material de apoio',
-      email: '',
+      nome: 'Contato',
+      email: 'Email',
       telefone: 0,
-      contato: 'Contato 2'
+      contato: 'Contato'
     }
   ]
 }

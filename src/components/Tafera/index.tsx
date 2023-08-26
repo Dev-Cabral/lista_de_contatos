@@ -9,7 +9,7 @@ import { Botao, BotaoSalvar } from '../../styles'
 
 type Props = TarefaClass
 
-const Tarefa = ({ id }: Props) => {
+const Tarefa = ({ id, nome, email, telefone }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [contato, setContato] = useState('')
@@ -48,9 +48,9 @@ const Tarefa = ({ id }: Props) => {
                   editar({
                     contato: 'Contato',
                     id,
-                    nome: 'Nome',
-                    email: 'Email',
-                    telefone: 0,
+                    nome,
+                    email,
+                    telefone,
                     criterio: ''
                   })
                 )
