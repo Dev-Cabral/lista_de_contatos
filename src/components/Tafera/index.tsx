@@ -12,23 +12,28 @@ type Props = TarefaClass
 const Tarefa = ({ id, nome, email, telefone }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
-  const [contato, setContato] = useState('')
+  const [contato, setContato] = useState(nome)
+  const [email1, setEmail1] = useState(email)
+  const [telefone1, setTelefone1] = useState(telefone)
 
   useEffect(() => {
     if (contato.length > 0) {
       setContato(contato)
+    } else if (email1.length > 0) {
+      setEmail1(email1)
+    } else if (telefone1 > 0) {
+      setTelefone1(telefone1)
     }
-  }, [contato])
+  }, [contato, email1, telefone1])
 
   function cancelarEdicao() {
     setEstaEditando(false)
-    setContato(contato)
+    setContato(nome)
   }
 
   return (
     <S.Card>
       <label htmlFor={contato}>
-        <input type="checkbox" id={contato} />
         <S.Titulo>
           {estaEditando && <em>Editando: </em>}
           {contato}
@@ -48,9 +53,9 @@ const Tarefa = ({ id, nome, email, telefone }: Props) => {
                   editar({
                     contato: 'Contato',
                     id,
-                    nome,
-                    email,
-                    telefone,
+                    nome: contato,
+                    email: email,
+                    telefone: telefone,
                     criterio: ''
                   })
                 )

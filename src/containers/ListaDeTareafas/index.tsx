@@ -34,16 +34,11 @@ const ListaDeTarefas = () => {
 
   const exibeResultadoFiltrado = (quantidade: number) => {
     let mensagem = ''
-    const complementacao =
-      termo !== undefined && termo.length > 0
-        ? `e
-      "${termo}"`
-        : ''
 
     if (contato === 'todas') {
-      mensagem = `${quantidade} contato(s) encontrada(s)  com: todas ${complementacao}`
+      mensagem = `${quantidade} contato(s) encontrada(s)`
     } else {
-      mensagem = `${quantidade} contato(s) encontrada(s) como: "${`${contato}=${valor}`}" ${complementacao}`
+      mensagem = `${quantidade} contato(s) encontrada(s) `
     }
     return mensagem
   }
