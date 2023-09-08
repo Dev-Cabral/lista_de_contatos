@@ -12,7 +12,11 @@ type Props = TarefaClass
 const Tarefa = ({ id, nome, email, telefone }: Props) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
-  const [contato, setContato] = useState(nome)
+  const [contato, setContato] = useState({
+    nome: nome,
+    email: email,
+    telefone: telefone
+  })
   const [email1, setEmail1] = useState(email)
   const [telefone1, setTelefone1] = useState(telefone)
 
