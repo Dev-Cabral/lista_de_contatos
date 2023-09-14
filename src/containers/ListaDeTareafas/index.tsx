@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-import Tarefa from '../../components/Tafera'
+import { Tarefa } from '../../components/Tafera/Tarefa'
 import { MainContainer, Titulo } from '../../styles'
 import { RootReducer } from '../../store'
 

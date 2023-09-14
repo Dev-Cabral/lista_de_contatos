@@ -13,7 +13,7 @@ const Formulario = () => {
 
   const [nome, setNome] = useState('')
   const [email, setEmail] = useState('')
-  const [telefone, setTelefone] = useState('')
+  const [telefone, setTelefone] = useState(0)
 
   const cadastrarTarefa = (evento: FormEvent) => {
     evento.preventDefault()
@@ -22,7 +22,7 @@ const Formulario = () => {
       cadastrar({
         nome: nome,
         email: email,
-        telefone: 0
+        telefone: telefone
       })
     )
     navigate('/')
