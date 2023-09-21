@@ -2,7 +2,7 @@ class Tarefa {
   contato?: string
   nome: string
   email: string
-  telefone?: number
+  telefone?: number | undefined
   id: number
   criterio?: string
 
@@ -11,7 +11,7 @@ class Tarefa {
     nome: string,
     email: string,
     criterio: string,
-    telefone: number,
+    telefone: number | undefined,
     id: number
   ) {
     this.nome = nome

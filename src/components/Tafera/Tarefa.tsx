@@ -3,8 +3,9 @@ import { useDispatch } from 'react-redux'
 import * as S from './styles'
 import { remover, editar } from '../../store/Reducers/tarefas'
 import { Botao, BotaoSalvar } from '../../styles'
+import Tarefa from '../../models/Tarefa'
 
-export const Tarefa = ({ id, nome, email, telefone }: Props) => {
+export const Tarefa1 = ({ id, nome, email, telefone }: Tarefa) => {
   const dispatch = useDispatch()
   const [estaEditando, setEstaEditando] = useState(false)
   const [contato, setContato] = useState({

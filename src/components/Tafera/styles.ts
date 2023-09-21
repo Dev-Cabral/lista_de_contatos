@@ -1,26 +1,10 @@
 import styled from 'styled-components'
 import variaveis from '../../styles/variaveis'
 
-import * as enums from '../../Utils/enums/Tarefa'
 import { Botao } from '../../styles'
 
 type TagProps = {
-  prioridade?: enums.Prioridade
-  status?: enums.Status
   parametro: 'status' | 'prioridade'
-}
-
-function retornaCorDeFundo(props: TagProps): string {
-  if (props.parametro === 'prioridade') {
-    if (props.prioridade === enums.Prioridade.URGENTE) return variaveis.vermelho
-    if (props.prioridade === enums.Prioridade.IMPORTANTE)
-      return variaveis.amarelo2
-  } else {
-    if (props.status === enums.Status.CONCLUIDO) return variaveis.verde
-    if (props.status === enums.Status.PENDENTE) return variaveis.amarelo
-  }
-
-  return '#ccc'
 }
 
 export const Card = styled.div`
@@ -48,7 +32,7 @@ export const Tag = styled.span<TagProps>`
   color: #fff;
   font-weight: bold;
   font-size: 10px;
-  background-color: ${(props) => retornaCorDeFundo(props)};
+  background-color: #fcfcfc;
   border-radius: 8px;
   margin-right: 16px;
   display: inline-block;

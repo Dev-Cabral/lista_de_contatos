@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 
-import { Tarefa } from '../../components/Tafera/Tarefa'
+import { Tarefa1 } from '../../components/Tafera/Tarefa'
 import { MainContainer, Titulo } from '../../styles'
 import { RootReducer } from '../../store'
 
@@ -51,7 +51,7 @@ const ListaDeTarefas = () => {
       <ul>
         {tarefas.map((t) => (
           <li key={t.nome}>
-            <Tarefa
+            <Tarefa1
               id={t.id}
               contato={t.contato}
               nome={t.nome}
