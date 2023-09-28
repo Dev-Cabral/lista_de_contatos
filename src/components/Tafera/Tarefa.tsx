@@ -28,8 +28,7 @@ export const Tarefa1 = ({ id, nome, email, telefone }: Tarefa) => {
         id,
         nome: contato.nome,
         email: contato.email,
-        telefone: contato.telefone,
-        criterio: ''
+        telefone: contato.telefone
       })
     )
     setEstaEditando(false)

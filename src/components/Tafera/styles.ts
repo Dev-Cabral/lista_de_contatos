@@ -3,10 +3,6 @@ import variaveis from '../../styles/variaveis'
 
 import { Botao } from '../../styles'
 
-type TagProps = {
-  parametro: 'status' | 'prioridade'
-}
-
 export const Card = styled.div`
   background-color: #fcfcfc;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -14,20 +10,21 @@ export const Card = styled.div`
   margin-bottom: 32px;
   border-radius: 16px;
 
+
   label {
     display flex;
     align-items: center;
     margin-bottom: 16px;
+    margin-left: 4px;
   }
 `
 
 export const Titulo = styled.h3`
   font-weight: bold;
   font-size: 18px;
-  // margin-left: 8px;
 `
 
-export const Tag = styled.span<TagProps>`
+export const Tag = styled.span`
   padding: 4px 8px;
   color: #fff;
   font-weight: bold;
@@ -50,11 +47,6 @@ export const Descricao = styled.textarea`
   resize: none;
   border: none;
   background-color: transparent;
-`
-
-export const BarraAcoes = styled.div`
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  padding-top: 16px;
 `
 
 export const BotaoCancelarRemover = styled(Botao)`

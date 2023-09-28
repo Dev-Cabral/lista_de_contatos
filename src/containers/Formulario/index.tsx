@@ -49,7 +49,11 @@ const Formulario = () => {
         <Campo
           required
           value={telefone}
-          onChange={({ target }) => setTelefone(target.value)}
+          onChange={({ target }) => {
+            const telefoneString = target.value
+            const telefone = parseInt(telefoneString)
+            setTelefone(telefone)
+          }}
           type="number"
           placeholder="Telefone:"
         />

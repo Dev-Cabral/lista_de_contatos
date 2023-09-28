@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import Tarefa from '../../models/Tarefa'
+import Contatos from '../../models/Tarefa'
 
-type TarefaState = {
-  itens: Tarefa[]
+type ContatoState = {
+  itens: Contatos[]
 }
 
-const initialState: TarefaState = {
+const initialState: ContatoState = {
   itens: [
     {
       id: 1,
@@ -24,7 +24,7 @@ const tarefasSlice = createSlice({
     remover: (state, action: PayloadAction<number>) => {
       state.itens = state.itens.filter((tarefa) => tarefa.id !== action.payload)
     },
-    editar: (state, action: PayloadAction<Tarefa>) => {
+    editar: (state, action: PayloadAction<Contatos>) => {
       const indexTarefa = state.itens.findIndex(
         (t) => t.id === action.payload.id
       )
@@ -33,7 +33,7 @@ const tarefasSlice = createSlice({
         state.itens[indexTarefa] = action.payload
       }
     },
-    cadastrar: (state, action: PayloadAction<Omit<Tarefa, 'id'>>) => {
+    cadastrar: (state, action: PayloadAction<Omit<Contatos, 'id'>>) => {
       const tarefaJaExiste = state.itens.find(
         (tarefa) =>
           tarefa.nome.toLowerCase() === action.payload.nome.toLowerCase()
